@@ -106,3 +106,6 @@ idea/
 
 # mypy
 .mypy_cache/
+
+staticfiles
+staticfiles/
