@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from auto_workshop.core.models import Vehicle
+
+
+class VehicleModelAdmin(admin.ModelAdmin):
+    list_display = ['plate', 'brand', 'model', 'color', 'year']
+
+
+admin.site.register(Vehicle, VehicleModelAdmin)

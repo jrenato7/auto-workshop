@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'auto_workshop.core',
+    'test_without_migrations',
 ]
 
 MIDDLEWARE = [
