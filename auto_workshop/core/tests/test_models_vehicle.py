@@ -23,3 +23,34 @@ class VehicleModelTest(TestCase):
     def test_str(self):
         self.assertEqual('Peugeot - MEU2650', str(self.vehicle))
 
+    def test_model_can_be_blank(self):
+        field = Vehicle._meta.get_field('model')
+        self.assertTrue(field.blank)
+
+    def test_year_can_be_blank(self):
+        field = Vehicle._meta.get_field('year')
+        self.assertTrue(field.blank)
+
+    def test_color_can_be_blank(self):
+        field = Vehicle._meta.get_field('color')
+        self.assertTrue(field.blank)
+
+    def test_model_can_be_null(self):
+        field = Vehicle._meta.get_field('model')
+        self.assertTrue(field.null)
+
+    def test_year_can_be_null(self):
+        field = Vehicle._meta.get_field('year')
+        self.assertTrue(field.null)
+
+    def test_color_can_be_null(self):
+        field = Vehicle._meta.get_field('color')
+        self.assertTrue(field.null)
+
+    def test_odometer_can_be_blank(self):
+        field = Vehicle._meta.get_field('odometer')
+        self.assertTrue(field.blank)
+
+    def test_odometer_can_be_null(self):
+        field = Vehicle._meta.get_field('odometer')
+        self.assertTrue(field.null)

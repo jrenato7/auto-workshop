@@ -13,3 +13,4 @@ static3==0.7.0
 gunicorn==19.9.0
 psycopg2==2.8.3
 django-test-without-migrations==0.6
+django-extensions==2.1.9
