@@ -7,12 +7,15 @@ from auto_workshop.core.models import Vehicle
 
 class VehicleModelTest(TestCase):
     def setUp(self):
-        self.vehicle = Vehicle(plate="MEU2650",
+        self.vehicle = Vehicle(plate="meu2650",
                                brand="Peugeot",
                                model="206 1.4",
                                year=2007,
                                color="silver")
         self.vehicle.save()
+
+    def test_plate_upper(self):
+        self.assertEqual("MEU2650", self.vehicle.plate)
 
     def test_create(self):
         self.assertTrue(Vehicle.objects.exists())

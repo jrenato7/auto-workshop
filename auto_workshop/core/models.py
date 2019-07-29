@@ -17,6 +17,10 @@ class Vehicle(models.Model):
     def __str__(self):
         return " - ".join([self.brand, self.plate])
 
+    def save(self, *args, **kwargs):
+        self.plate = self.plate.upper()
+        super().save(*args, **kwargs)
+
     class Meta:
         verbose_name = 'veículo'
         verbose_name_plural = 'veículos'
