@@ -1,6 +1,7 @@
 # auto-workshop
 Automotive service management system.
 
+[![Build Status](https://travis-ci.org/jrenato7/auto-workshop.svg?branch=master)](https://travis-ci.org/jrenato7/auto-workshop)
 
 ## How to develop?
 
